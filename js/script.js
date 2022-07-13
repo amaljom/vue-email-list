@@ -10,12 +10,7 @@ const app= new Vue(
 
     methods:{
         lenghtTester:function(){
-            if(this.emails.length<10){
-                return false;
-            }
-            else{
-                return true;
-            }
+            return this.emails.length>=10;
         }
     },
     
