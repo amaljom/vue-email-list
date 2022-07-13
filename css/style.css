@@ -1,0 +1,29 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(49, 35, 63);
+}
+
+.styling{
+    width: 265px;
+    margin: 0 auto;
+    margin-top: 90px;
+}
+.spinner{
+    height: 120px;
+    width: 120px;
+    margin: 0 auto;
+    margin-top: 40px;
+    border: solid 10px black;
+    border-radius: 50%;
+    border-bottom: 10px solid rgb(49, 35, 63);
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}  

@@ -11,7 +11,7 @@ const app= new Vue(
     methods:{
         lenghtTester:function(){
             return this.emails.length>=10;
-        }
+        },
     },
     
 

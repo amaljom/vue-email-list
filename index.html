@@ -13,10 +13,14 @@
 </head>
 <body>
 
+ 
+
     <div id="root">
-        <ul v-if="lenghtTester()" class="list-group">
+        <ul v-if="lenghtTester()" class="list-group styling">
             <li  v-for="element in emails" class="list-group-item">{{ element }}</li>
         </ul>
+
+        <div v-else class="spinner"> </div>
     </div>
     
     
