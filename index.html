@@ -15,7 +15,7 @@
 
     <div id="root">
         <ul class="list-group">
-            <li class="list-group-item"></li>
+            <li v-for="element in emails" class="list-group-item">{{ element.email }}</li>
         </ul>
     </div>
     
