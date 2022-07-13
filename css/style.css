@@ -34,7 +34,7 @@ body{
 .inner-loading-bar{
     background-color: brown;
     height: 12px;
-    width: 0px;
+    width: 0;
 }
 
 @keyframes spin {

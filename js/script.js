@@ -3,6 +3,7 @@ const app= new Vue(
     el: '#root',
 
     data:{
+        lunghezzaArray:'',
         emails:[
             
         ],
@@ -12,23 +13,25 @@ const app= new Vue(
         lenghtTester:function(){
             return this.emails.length>=10;
         },
+
         loadingBarClass: function(){
-            switch (this.emails.length){
-                case 3:
-                    return 'w-25'
-                    break;
-                case 5:
-                    return 'w-50'
-                    break;
-                case 7:
-                    return 'w-75'
-                    break;
-                case 10:
-                    return 'w-10';
-                    break;
-            }
-        }
+            if (this.emails.length >= 2){
+                this.lunghezzaArray='w-25'
+                if(this.emails.length >= 5){
+                    this.lunghezzaArray='w-50'
+                    if(this.emails.length >= 7){
+                        this.lunghezzaArray='w-75'
+                        if(this.emails.length >9){
+                            this.lunghezzaArray='w-100'
+                        }
+                    }
+                }
+            }  
+            return this.lunghezzaArray;
+        },
     },
+
+
     
 
     created(){
