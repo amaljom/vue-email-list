@@ -17,10 +17,24 @@ body{
     width: 120px;
     margin: 0 auto;
     margin-top: 40px;
-    border: solid 10px black;
+    border: solid 10px rgb(255, 255, 255);
     border-radius: 50%;
     border-bottom: 10px solid rgb(49, 35, 63);
     animation: spin 2s linear infinite;
+}
+
+.loading-bar{
+    width: 300px;
+    height: 12px;
+    background-color: white;
+    margin: 0 auto;
+    margin-top: 45px;
+    border-radius: 4px;
+}
+.inner-loading-bar{
+    width: 10%;
+    background-color: brown;
+    height: 12px;
 }
 
 @keyframes spin {
