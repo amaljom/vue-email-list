@@ -22,7 +22,7 @@
         <div v-else>
             <div  class="spinner"> </div>
             <div class="loading-bar">
-                <div class="inner-loading-bar"></div>
+                <div class="inner-loading-bar" :class="loadingBarClass()"></div>
             </div>
         </div>
         
