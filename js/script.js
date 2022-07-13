@@ -7,21 +7,26 @@ const app= new Vue(
             
         ],
     },
+
+    methods:{
+        lenghtTester:function(){
+            if(this.emails.length<10){
+                return false;
+            }
+            else{
+                return true;
+            }
+        }
+    },
     
 
     created(){
-        let result=[];
-           for (let i = 0; i < 10; i++){
+            for (let i = 0; i < 10; i++){
                 axios.get( 'https://flynn.boolean.careers/exercises/api/random/mail' )
-                .then((response)=>{
-                    result[i] = response.data;
-                    console.log(result)
-                });
-           }
-           for (let i = 0; i < 10; i++){ 
-                this.emails.push({
-                     email: result[i]
+                .then((res)=>{
+                    this.emails.push(res.data.response);
                 });
             }
+           
      },
 });

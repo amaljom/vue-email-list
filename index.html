@@ -14,8 +14,8 @@
 <body>
 
     <div id="root">
-        <ul class="list-group">
-            <li v-for="element in emails" class="list-group-item">{{ element.email }}</li>
+        <ul v-if="lenghtTester()" class="list-group">
+            <li  v-for="element in emails" class="list-group-item">{{ element }}</li>
         </ul>
     </div>
     
